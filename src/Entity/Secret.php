@@ -97,8 +97,8 @@ class Secret
         $arr = [
             "hash" => $this->hash,
             "secretText" => $this->secretText,
-            "createdAt" => $this->createdAt,
-            "expiresAt" => $this->expiresAt,
+            "createdAt" => $this->createdAt->format('Y-m-d H:i:s'),
+            "expiresAt" => $this->expiresAt->format('Y-m-d H:i:s'),
             "remainingViews" => $this->remainingViews
         ];
         return $arr;
